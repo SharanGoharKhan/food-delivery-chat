@@ -38,7 +38,7 @@
 </head>
 
 <body>
-    <h1>Update 6</h1>
+    <h1>Update 7</h1>
     <div class="spinner loading" id="spinner"></div>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
@@ -53,23 +53,27 @@
         })();
         Tawk_API.onLoad = function () {
             document.getElementById('spinner').remove()
-            Tawk_API.maximize()
-            // while(!Tawk_API.isChatMaximized()) {
-            //     Tawk_API.maximize()
-            // }
-            // document.getElementById('minimizeChatMinifiedBtn').addEventListener('click',() => {
-            //     console.log('closed window')
-            //     window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"}
-            //     )
+            // Tawk_API.maximize()
+            while(!Tawk_API.isChatMaximized()) {
+                Tawk_API.maximize()
+            }
+            document.getElementById('tawkchat-status-text-container').addEventListener('click',() => {
+                window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"}
+                )
+        };
             // setTimeout(()=>{
             // if (Tawk_API.isChatMaximized())
             //     document.getElementById('minimizeChatMinifiedBtn').addEventListener('click',() => window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html")
             // },5000)
-        };
-        Tawk_API.onChatMinimized = function () {
-            window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"
-            // Tawk_API.maximize()
-        };
+        // Tawk_API.onChatMinimized = function () {
+        //     if(first_time == 1) {
+        //         first_time++
+        //         return
+        //     } else {
+        //     window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"
+        //     }
+        //     // Tawk_API.maximize()
+        // };
     </script>
     <!--End of Tawk.to Script-->
 </body>
