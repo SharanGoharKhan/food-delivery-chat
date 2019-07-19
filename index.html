@@ -38,10 +38,12 @@
 </head>
 
 <body>
-    <h1>Update 8</h1>
+    <h1>Update 9</h1>
     <div class="spinner loading" id="spinner"></div>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
+        var counter = 0
+        var first_time = true
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         (function () {
             var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
@@ -60,23 +62,31 @@
             // document.getElementById('tawkchat-status-text-container').addEventListener('click',() => {
             //     window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"}
             //     )
-            setTimeout(() => {
-                if (Tawk_API.isChatMaximized()) {
-                    document.getElementById('tawkchat-status-text-container').addEventListener('click', () => {
-                        window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"
-                    })
-                }
-            }, 3000)
+            // setTimeout(() => {
+            //     if (Tawk_API.isChatMaximized()) {
+            //         document.getElementById('tawkchat-status-text-container').addEventListener('click', () => {
+            //             window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"
+            //         })
+            //     }
+            // }, 3000)
         };
-        // Tawk_API.onChatMinimized = function () {
-        //     if(first_time == 1) {
-        //         first_time++
-        //         return
-        //     } else {
-        //     window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"
-        //     }
-        //     // Tawk_API.maximize()
-        // };
+        Tawk_API.onChatMinimized = function () {
+            Tawk_API.maximize()
+            alert(`Counter: ${counter}`)
+            alert(`Is it the first time: ${first_time}`)
+            console.log(`Counter: ${counter}`)
+            console.log(`Is it the first time: ${first_time}`)
+            if (first_time) {
+                alert(`if block executed`)
+                console.log(`if block executed`)
+                first_time = false
+                return
+            } else {
+                alert(`else block exectued`)
+                console.log(`else block exectued`)
+                window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"
+            }
+        };
     </script>
     <!--End of Tawk.to Script-->
 </body>
