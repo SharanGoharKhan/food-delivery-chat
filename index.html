@@ -7,38 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Enatega Chat UI</title>
     <style>
-            .spinner.loading {
-                text-align: center;
+        .spinner.loading {
+            text-align: center;
+        }
+
+        .spinner.loading:before {
+            content: "";
+            height: 30px;
+            width: 30px;
+            margin: -15px auto auto -15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-width: 8px;
+            border-style: solid;
+            border-color: #ff8852 #ccc #ccc;
+            border-radius: 100%;
+            animation: rotation .7s infinite linear;
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
             }
-    
-            .spinner.loading:before {
-                content: "";
-                height: 30px;
-                width: 30px;
-                margin: -15px auto auto -15px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                border-width: 8px;
-                border-style: solid;
-                border-color: #ff8852 #ccc #ccc;
-                border-radius: 100%;
-                animation: rotation .7s infinite linear;
+            to {
+                transform: rotate(359deg);
             }
-    
-            @keyframes rotation {
-                from {
-                    transform: rotate(0deg);
-                }
-                to {
-                    transform: rotate(359deg);
-                }
-            }
-        </style>
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Update 7</h1>
+    <h1>Update 8</h1>
     <div class="spinner loading" id="spinner"></div>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
@@ -53,18 +53,21 @@
         })();
         Tawk_API.onLoad = function () {
             document.getElementById('spinner').remove()
-            // Tawk_API.maximize()
-            while(!Tawk_API.isChatMaximized()) {
-                Tawk_API.maximize()
-            }
-            document.getElementById('tawkchat-status-text-container').addEventListener('click',() => {
-                window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"}
-                )
+            Tawk_API.maximize()
+            // while(!Tawk_API.isChatMaximized()) {
+            //     Tawk_API.maximize()
+            // }
+            // document.getElementById('tawkchat-status-text-container').addEventListener('click',() => {
+            //     window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"}
+            //     )
+            setTimeout(() => {
+                if (Tawk_API.isChatMaximized()) {
+                    document.getElementById('tawkchat-status-text-container').addEventListener('click', () => {
+                        window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"
+                    })
+                }
+            }, 3000)
         };
-            // setTimeout(()=>{
-            // if (Tawk_API.isChatMaximized())
-            //     document.getElementById('minimizeChatMinifiedBtn').addEventListener('click',() => window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html")
-            // },5000)
         // Tawk_API.onChatMinimized = function () {
         //     if(first_time == 1) {
         //         first_time++
