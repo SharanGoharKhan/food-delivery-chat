@@ -38,7 +38,7 @@
 </head>
 
 <body>
-    <h1>Update 10</h1>
+    <h1>Update 11</h1>
     <div class="spinner loading" id="spinner"></div>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
@@ -72,19 +72,19 @@
         };
         Tawk_API.onChatMinimized = function () {
             Tawk_API.maximize()
-            alert(`Counter: ${counter}`)
-            alert(`Is it the first time: ${first_time}`)
-            console.log(`Counter: ${counter}`)
-            console.log(`Is it the first time: ${first_time}`)
+            // alert(`Counter: ${counter}`)
+            // alert(`Is it the first time: ${first_time}`)
+            // console.log(`Counter: ${counter}`)
+            // console.log(`Is it the first time: ${first_time}`)
             counter = counter+1
             if (first_time) {
-                alert(`if block executed`)
-                console.log(`if block executed`)
+                // alert(`if block executed`)
+                // console.log(`if block executed`)
                 first_time = false
                 return
             } else {
-                alert(`else block exectued`)
-                console.log(`else block exectued`)
+                // alert(`else block exectued`)
+                // console.log(`else block exectued`)
                 window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"
             }
         };
