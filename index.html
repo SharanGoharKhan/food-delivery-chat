@@ -38,7 +38,7 @@
 </head>
 
 <body>
-    <h1>Update 4</h1>
+    <h1>Update 5</h1>
     <div class="spinner loading" id="spinner"></div>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
@@ -53,14 +53,14 @@
         })();
         Tawk_API.onLoad = function () {
             document.getElementById('spinner').remove()
-            Tawk_API.maximize()
+            // Tawk_API.maximize()
             setTimeout(()=>{
             if (Tawk_API.isChatMaximized())
                 document.getElementById('minimizeChatMinifiedBtn').addEventListener('click',() => window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html")
-            },3000)
+            },5000)
         };
         Tawk_API.onChatMinimized = function () {
-            Tawk_API.maximize()
+            // Tawk_API.maximize()
         };
     </script>
     <!--End of Tawk.to Script-->
