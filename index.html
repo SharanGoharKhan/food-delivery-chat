@@ -38,7 +38,7 @@
 </head>
 
 <body>
-    <h1>Update 13</h1>
+    <h1>Update 14</h1>
     <div class="spinner loading" id="spinner"></div>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
@@ -81,7 +81,9 @@
                 alert(`if block executed`)
                 console.log(`if block executed`)
                 first_time = false
-                return
+                window.postMessage(JSON.stringify({
+                    data: 'open'
+                }))
             } else {
                 alert(`else block exectued`)
                 console.log(`else block exectued`)
