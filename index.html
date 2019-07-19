@@ -38,11 +38,9 @@
 </head>
 
 <body>
-    <h1>Update 16</h1>
     <div class="spinner loading" id="spinner"></div>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
-        var counter = 0
         var first_time = true
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         (function () {
@@ -56,38 +54,14 @@
         Tawk_API.onLoad = function () {
             document.getElementById('spinner').remove()
             Tawk_API.maximize()
-            // while(!Tawk_API.isChatMaximized()) {
-            //     Tawk_API.maximize()
-            // }
-            // document.getElementById('tawkchat-status-text-container').addEventListener('click',() => {
-            //     window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"}
-            //     )
-            // setTimeout(() => {
-            //     if (Tawk_API.isChatMaximized()) {
-            //         document.getElementById('tawkchat-status-text-container').addEventListener('click', () => {
-            //             window.location = "https://sharangoharkhan.github.io/food-delivery-chat/test.html"
-            //         })
-            //     }
-            // }, 3000)
         };
         Tawk_API.onChatMinimized = function () {
             Tawk_API.maximize()
-            alert(`Counter: ${counter}`)
-            alert(`Is it the first time: ${first_time}`)
-            console.log(`Counter: ${counter}`)
-            console.log(`Is it the first time: ${first_time}`)
-            counter = counter + 1
-            if (first_time) {
-                alert(`if block executed`)
-                console.log(`if block executed`)
+            if (first_time)
                 first_time = false
-                // window.postMessage('open')
-            } else {
-                alert(`else block exectued`)
-                console.log(`else block exectued`)
-                // window.postMessage('close')
+            else 
                 window.location = "https://enatega.com/"
-            }
+            
         };
     </script>
     <!--End of Tawk.to Script-->
